@@ -4,8 +4,8 @@ bool CzyPierwsza(int n)
 		if (n % i == 0)
 			return false;
 	return true;
-
 }
+Console.WriteLIne(CzyPierwsza(371);
 
 string[] liczby = System.IO.File.ReadAllLines(@"C:\Users\uczen\Desktop\Zadanie4\liczby_przyklad.txt"); // Wczytanie pliku (Dokumentacja: learn.microsoft.com)
 
