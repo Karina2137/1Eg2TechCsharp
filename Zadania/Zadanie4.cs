@@ -17,4 +17,4 @@ foreach (string line in liczby)
     Console.WriteLine(line);
 
 wynik.Flush(); // wyczyszca zawartość pliku
-wynik.Clos
+wynik.Close(); // zamknięcie pliku
