@@ -1,0 +1,151 @@
+//Przed diagnozą
+
+//Algorytmy
+
+//Napisz i przetestuj algorytm Euklidesa odejnomawie
+
+//int EuklidesOdejmowanie(int a, int b)
+//{
+//    while (a != b)
+//    {
+//        if (a > b) a -=b;
+//        if (a < b) b -=a;
+//    }
+//    return a;
+//}
+
+//int x = int.Parse(Console.ReadLine());
+//int y = int.Parse(Console.ReadLine());
+//Console.WriteLine(EuklidesOdejmowanie(x, y));
+
+//Napisz i przetestuj algorytm Euklidesa odejnomawie
+
+//int EuklidesModulo(int a, int b)
+//{
+//    int pom;
+//    while(b > 0)
+//    {
+//        pom = a;
+//        b = a % b;
+//        a = pom;
+//    }
+//    return a;
+//}
+
+//int a = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
+//Console.WriteLine(EuklidesModulo(a, b));
+
+//Napisz i przetestuj algorytm sortowania bąbelkowego
+
+//void SortBabelkowe(int[] T)
+//{
+//    int n = T.Length;
+//    int pom;
+//    for (int i = n-1; i > 0; i--)
+//    {
+//        for (int j = 0; j < i; j++)
+//        {
+//            if(T[j] > T[j + 1])
+//            {
+//                pom = T[j];
+//                T[j] = T[j + 1];
+//                T[j + 1] = pom;
+//            }
+//        }
+//    }
+//}
+
+//Random r = new Random();
+//int n = 20;
+//int[] T = new int[20];
+//for (int i = 0; i < n; i++) T[i] = r.Next(1, 100);
+//for (int i = 0; i < n; i++) Console.Write(T[i] + " ");
+//Console.WriteLine("\n");
+//SortBabelkowe(T);
+//for (int i = 0; i < n; i++) Console.Write(T[i] + " ");
+
+//Wypisz wszystkie pary liczb zaprzyjaźnionych w przedziale od 1 do 10000
+
+//int SumaDzielnikowWlasciwych(int n)
+//{
+//    int suma = 0;
+//    for (int i = 1; i <= n/2; i++)
+//        if (n % i == 0)
+//            suma += i;
+//    return suma;
+//}
+//int pom;
+//for (int i = 0; i <= 10000; i++)
+//{
+//    pom = SumaDzielnikowWlasciwych(i);
+//    if (i == SumaDzielnikowWlasciwych(pom) && i != pom) Console.WriteLine(i + " " + pom);
+//}
+
+//Listy - Tablice - W tablicy 30 losowych liczb trzycyfrowych
+//znajdź ilość wielokrotności liczby 17 (zapisz te liczby do listy wynikowej)
+
+//using System.Collections;
+
+//Random r = new Random();
+//int n = 30;
+//int[] T = new int[n];
+//for (int i = 0; i < n; i++) T[i] = r.Next(100, 1000);
+//for (int i = 0; i < n; i++) Console.Write(T[i] + " ");
+//Console.WriteLine("\n");
+
+//List<int> list = new List<int>();
+////ArrayList al = new ArrayList();
+//foreach (var t in T) if (t % 17 == 0) list.Add(t);
+//foreach (var l in list) Console.WriteLine(l + " ");
+
+//Macierz cyfr - wypisz sumy kolejnych ramek w macierzy kwadratowej o n parzystym
+
+//using System.Collections;
+//using System.Diagnostics.CodeAnalysis;
+
+//Random r = new Random();
+//int n = 8;
+//int[,] M = new int[n, n];
+
+//for (int i = 0; i < n; i++)
+//	for (int j = 0; j < n; j++)
+//		M[i, j] = r.Next(1, 10);
+
+//for (int i = 0; i < n; i++)
+//{ 
+//    for (int j = 0; j < n; j++)
+//        Console.Write(M[i, j] + " ");
+//    Console.WriteLine("");
+//}
+
+////Sposób 1 - przez sumy podmacierzy
+
+//List<int> S = new List<int>();
+//int suma;
+//for (int i = 1; i <= n/2; i++)
+//{
+//    suma = 0;
+//    for (int j = n/2 - i; j < n/2 + i; j++)
+//    {
+//        for (int k = n/2 - i; k < n/2 + i; k++)
+//        {
+//            suma = suma + M[j, k];
+//        }
+//    }
+//    S.Add(suma);
+//}
+
+//Console.WriteLine("\n");
+//foreach (var s in S)
+//{
+//    Console.WriteLine(s);
+//}
+
+//Nie Działa - sprawdź
+//int[] T = S.ToArray();
+//Console.WriteLine("\n" + T[0]);
+//for (int i = 0; i < S.Count; i++)
+//{
+//    Console.WriteLine(T[i] - T[i - 1]);
+//}
