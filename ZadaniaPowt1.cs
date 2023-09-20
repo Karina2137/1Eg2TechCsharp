@@ -1,17 +1,17 @@
 //1.User podaje NWD i NWW dwóch liczb. Napisz program, który znajdzie te liczby.
 
-int NWD(int a, int b)
-{
-    while (a != b)
-    {
-        if (a > b) a-=b;
-        if (b > a) b-=a;
-    }
-    return a;
-}
-int NWW(int a, int b)
-{
-    return a*b/NWD(a, b);
+//int NWD(int a, int b)
+//{
+//    while (a != b)
+//    {
+//        if (a > b) a-=b;
+//        if (b > a) b-=a;
+//    }
+//    return a;
+//}
+//int NWW(int a, int b)
+//{
+//    return a*b/NWD(a, b);
 }
 //int x = int.Parse(Console.ReadLine());
 //int y = int.Parse(Console.ReadLine());
@@ -88,7 +88,20 @@ int NWW(int a, int b)
 //7. Dwie wieżyce, jedna wysokości 30 stóp, druga 40 stóp, oddalone są od siebie o 50 stóp. 
 //Pomiędzy nimi znajduje się wodotrysk, do którego zlatują dwa ptaki z wierzchołków obu wieżyc 
 //i lecąc z jednakową prędkością przybywają w tym samym czasie. 
-//Napisz program, który obliczy jest dłuższa odległość pozioma wodotrysku jednej z wieżyc?
+//Napisz program, który obliczy jaka jest dłuższa odległość pozioma wodotrysku jednej z wieżyc?
+
+//int w1 = 30;
+//int w2 = 40;
+//int odl = 50;
+
+//for (int i = 1; i <= odl; i++)
+//{
+//    if (w1*w1 + i*i == w2*w2 + (odl-i)*(odl-i))
+//    {
+//        if (i > odl / 2) Console.WriteLine(i);
+//        else Console.WriteLine(odl-i);
+//    }
+//}
 
 //8. Brajanek z Dżesiką grają w siedem. Gra polega na tym, że jeden z graczy podaje granice przedziału <a, b> 
 //a drugi z nich musi szybko odpowiedzieć, ile w tym przedziale jest liczb,
